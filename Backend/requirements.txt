@@ -1,0 +1,9 @@
+Flask
+flask-cors
+Flask-SocketIO
+pymongo
+python-dotenv
+PyJWT
+bcrypt
+google-auth
+requests
