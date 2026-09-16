@@ -21,7 +21,7 @@ const Register = () => {
   const handleRegister = async (e) => {
     e.preventDefault();
     try {
-        const response = await fetch('http://pranati:9005/api/auth/register', {
+        const response = await fetch(`${process.env.REACT_APP_BASE_URL}/auth/register`, {
             method: 'POST',
             mode: 'cors',
             headers: {

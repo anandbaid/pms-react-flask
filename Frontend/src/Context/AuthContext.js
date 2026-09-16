@@ -25,7 +25,7 @@ const AuthProvider = ({ children }) => {
         if(!currentUserId) {
             return;
         }
-        const newsocket = io('http://pranati:9005');
+        const newsocket = io((process.env.REACT_APP_BASE_URL || '').replace(/\/api\/?$/, ''));
         setsocket(newsocket);
 
         newsocket.on('connect', () => {

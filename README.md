@@ -62,7 +62,7 @@ cp .env.example .env    # set REACT_APP_BASE_URL and REACT_APP_GOOGLE_CLIENT_ID
 npm start               # http://localhost:3000
 ```
 
-> Note: a few auth/socket calls in `AuthContext.js`, `Login.js` and `Register.js` still point at a hard-coded dev host (`http://pranati:9005`). Replace them with `process.env.REACT_APP_BASE_URL` for your environment.
+> The Socket.IO client connects to `REACT_APP_BASE_URL` with the trailing `/api` removed (e.g. `http://localhost:9005`).
 
 ## Environment variables
 
@@ -73,3 +73,7 @@ npm start               # http://localhost:3000
 | | `GOOGLE_CLIENT_ID` | Verifies Google ID tokens |
 | `Frontend/.env` | `REACT_APP_BASE_URL` | API base URL |
 | | `REACT_APP_GOOGLE_CLIENT_ID` | Google Sign-In client ID |
+
+## License
+
+[MIT](LICENSE) © 2026 Anand Baid
